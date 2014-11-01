@@ -1,4 +1,6 @@
 #!/bin/bash
+# -v for commentary on algorithm run completion
+
 
 echo -ne "Compiling algortihms..."
 cmd/compile.sh
@@ -13,7 +15,7 @@ else
 fi
 
 echo -ne "Running algorithms (this will take a while)..."
-cmd/run_algorithms.sh
+cmd/run_algorithms.sh $1
 echo "done"
 
 echo -ne "Generating graphs..."

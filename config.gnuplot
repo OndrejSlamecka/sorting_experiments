@@ -9,8 +9,5 @@ set tic scale 0
 set grid ytics lc rgb "#505050"
 
 unset border
-unset key
-
-plot infile with linespoints lt rgb "#406090"
-
+set key left top
 

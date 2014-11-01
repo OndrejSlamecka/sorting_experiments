@@ -6,23 +6,32 @@ cat tex/header.tex > tmp/pdf/graphs.tex
 graph_code=$(<tex/figure.tex)
 
 shopt -s nullglob
-for alg in tmp/alg_bin/*
+
+for generator in data_gen/*
 do
-	alg_name=${alg/tmp\/alg_bin\//}
+	gen_name=${generator/data_gen\//}
+	gen_name=${gen_name/.py/}
 
-	for generator in data_gen/*
+	echo "\\section{\\detokenize{$gen_name}}" | cat >> tmp/pdf/graphs.tex
+
+	for alg in tmp/alg_bin/*
 	do
-		gen_name=${generator/data_gen\//}
-		gen_name=${gen_name/.py/}
+		alg_name=${alg/tmp\/alg_bin\//}
 
-		infile="tmp/graphs/$alg_name/$gen_name"
+		infile="tmp/graphs/$gen_name/$alg_name"
 
 		c=$graph_code	
 		c=${c/<FILE>/$infile}
-		c=${c/<ALGORITHM>/$alg_name}
-		c=${c/<DATASET>/$gen_name}
+		c=${c/<CAPTION>/$alg_name}
 		echo "$c" | cat >> tmp/pdf/graphs.tex
 	done
+
+	# Combined
+	infile="tmp/graphs/$gen_name/combined"
+	c=$graph_code
+	c=${c/<FILE>/$infile}
+	c=${c/<CAPTION>/Combined}	
+	echo "$c" | cat >> tmp/pdf/graphs.tex
 done
 
 echo '\end{document}' | cat >> tmp/pdf/graphs.tex

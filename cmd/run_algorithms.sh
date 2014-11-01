@@ -10,8 +10,8 @@ do
 		gen_name=${generator/data_gen\//}
 		gen_name=${gen_name/.py/}
 
-		mkdir -p tmp/alg_results/$alg_name
-		results=tmp/alg_results/$alg_name/$gen_name
+		mkdir -p tmp/alg_results/$gen_name
+		results=tmp/alg_results/$gen_name/$alg_name
 		rm -f $results # Flush previously computed data
 
 		for input in `ls -v tmp/input/$gen_name/*`
