@@ -12,7 +12,7 @@ do
 	gen_name=${generator/data_gen\//}
 	gen_name=${gen_name/.py/}
 
-	echo "\\section{\\detokenize{$gen_name}}" | cat >> tmp/pdf/graphs.tex
+	echo "\\section{Dataset: \\detokenize{$gen_name}}" | cat >> tmp/pdf/graphs.tex
 
 	for alg in tmp/alg_bin/*
 	do

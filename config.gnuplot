@@ -1,4 +1,4 @@
-set terminal epslatex size 5,3 color colortext
+set terminal epslatex size 7,3 color colortext
 set output outfile
 
 # Rotate X labels and get rid of the small stripes at the top (nomirror)
