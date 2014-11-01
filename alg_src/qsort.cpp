@@ -8,45 +8,45 @@ using namespace std;
 
 int partition(vector<int> &input, int l, int r) 
 {
-    int pivot = input[r];
+	int pivot = input[r];
 
-    while (l < r) {
-        while (input[l] < pivot)
-            l++;
+	while (l < r) {
+		while (input[l] < pivot)
+			l++;
 
-        while (input[r] > pivot)
-            r--;
+		while (input[r] > pivot)
+			r--;
 
-        if (input[l] == input[r]) {
-            l++;
-        } else if (l < r) {
-            swap(input[l], input[r]);
-        }
-    }
+		if (input[l] == input[r]) {
+			l++;
+		} else if (l < r) {
+			swap(input[l], input[r]);
+		}
+	}
 
-    return r;
+	return r;
 }
 
 void quicksort(vector<int> &input, int l, int r)
 {
-    if (l < r) {
-        int j = partition(input, l, r);        
-        quicksort(input, l, j-1);
-        quicksort(input, j+1, r);
-    }
+	if (l < r) {
+		int j = partition(input, l, r);        
+		quicksort(input, l, j-1);
+		quicksort(input, j+1, r);
+	}
 }
 
 int main() 
 {
 	vector<int> input;
 	int n;
-    while(cin >> n) input.push_back(n);
+	while(cin >> n) input.push_back(n);
 
 	clock_t start = clock();
 
-    quicksort(input, 0, input.size() - 1);
+	quicksort(input, 0, input.size() - 1);
 
 	cout << (double)(clock() - start) / CLOCKS_PER_SEC << endl;
 
-    return 0;
+	return 0;
 }
