@@ -1,5 +1,7 @@
 This takes all algorithms in `alg_src` and compiles them, runs them on a lot of data of different kinds (see `data_gen` folder), saves the time spent, plots it and generates TeX and PDF files with the plots.
 
+[Sample output](http://www.slamecka.cz/misc/sorting_exp_sample.pdf)
+
 Usage
 -----
 

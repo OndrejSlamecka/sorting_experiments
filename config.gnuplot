@@ -9,5 +9,6 @@ set tic scale 0
 set grid ytics lc rgb "#505050"
 
 unset border
-set key left top
+set key right top
+set key outside
 
