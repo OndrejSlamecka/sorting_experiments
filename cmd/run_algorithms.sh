@@ -1,5 +1,10 @@
 #!/bin/bash
 
+f2i() {
+  awk 'BEGIN{for (i=1; i<ARGC;i++)
+   printf "%.0f\n", ARGV[i]}' "$@"
+}
+
 shopt -s nullglob
 for alg in tmp/alg_bin/*
 do
@@ -20,7 +25,16 @@ do
 			result=$(cat $input | $alg)
 			echo "$inp_name $result" | cat >> $results
 			if [ "$1" == "-v" ]; then
-				 echo "Finished $alg_name on $gen_name/$inp_name"
+				 echo "Finished $alg_name on $gen_name/$inp_name in $result"
+			fi
+
+			int_result=$(f2i $result)
+			if [ $int_result -gt 6 ]; then
+				if [ "$1" == "-v" ]; then
+					echo "Last run of $alg_name took more than 6 seconds. Continuing with next algorithm."
+				fi
+
+				break
 			fi
 		done
 	done

@@ -5,6 +5,7 @@ Usage
 
 `$ ./run.sh` 
 
+(and go see a movie, it will take a while)
 
 Dependencies
 ------------
