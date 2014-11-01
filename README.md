@@ -18,7 +18,7 @@ Dependencies
 
 TODO
 ----
-* insert, heap and counting sorts 
+* insert, heap sorts 
 * quick sort with "median in linear time" algorithm and quick sort from STL
 
 
