@@ -18,7 +18,6 @@ Dependencies
 
 TODO
 ----
-* insert sorts 
 * quick sort with "median in linear time" algorithm and quick sort from STL
 
 
