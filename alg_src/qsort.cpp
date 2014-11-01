@@ -1,8 +1,7 @@
+// QuickSort which selects the last element as a pivot
 #include <iostream>
 #include <vector>
 #include <algorithm> // swap
-
-#define uint unsigned int
 
 using namespace std;
 

@@ -17,5 +17,3 @@ do
 		gnuplot -e "infile='$infile'; outfile='$outfile'" config.gnuplot
 	done
 done
-
-#pdflatex -interaction=batchmode document.tex > /dev/null
