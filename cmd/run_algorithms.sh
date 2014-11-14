@@ -29,7 +29,7 @@ do
 			fi
 
 			int_result=$(f2i $result)
-			if [ $int_result -gt 6 ]; then
+			if [ $int_result -gt 1 ]; then
 				if [ "$1" == "-v" ]; then
 					echo "Last run of $alg_name took more than 6 seconds. Continuing with next algorithm."
 				fi

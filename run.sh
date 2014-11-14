@@ -26,4 +26,4 @@ echo -ne "Putting them into a TeX and PDF..."
 cmd/create_pdf.sh
 echo "done"
 
-echo "and done!"
+echo "and done! See tmp/pdf/graphs.pdf"

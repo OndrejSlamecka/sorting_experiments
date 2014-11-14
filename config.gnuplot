@@ -8,6 +8,8 @@ set xtics nomirror rotate by -45
 set tic scale 0
 set grid ytics lc rgb "#505050"
 
+set linetype  6 lc rgb "#e67e22" lw 1
+
 unset border
 set key right top
 set key outside

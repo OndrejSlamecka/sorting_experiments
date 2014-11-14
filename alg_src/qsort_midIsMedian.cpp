@@ -7,7 +7,7 @@ using namespace std;
 
 int partition(vector<int> &input, int l, int r) 
 {
-	int pivot = input[r];
+	int pivot = input[(int) ((r + l) / 2)];
 
 	while (l < r) {
 		while (input[l] < pivot)
