@@ -20,7 +20,9 @@ Dependencies
 
 TODO
 ----
-* quick sort with "median in linear time" algorithm and quick sort from STL
+
+* Detokenize gnuplot's labels (see qsort_midIsPivot in graphs.pdf)
+* Use parallelization
 
 
 -------------------
