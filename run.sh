@@ -22,7 +22,7 @@ echo -ne "Generating graphs..."
 cmd/plot.sh
 echo "done"
 
-echo -ne "Putting them into a TeX and PDF..."
+echo -ne "Putting them into TeX and PDF..."
 cmd/create_pdf.sh
 echo "done"
 

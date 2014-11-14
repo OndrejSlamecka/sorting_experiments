@@ -26,7 +26,7 @@ do
 		rungen $i $generator $name
 	done
 	
-	for((i=1000000;i<=5000000;i+=50000))
+	for((i=1000000;i<=2000000;i+=50000))
 	do
 		rungen $i $generator $name
 	done
